@@ -34,3 +34,8 @@ code {
     'Courier New',
     monospace;
 }
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+}
