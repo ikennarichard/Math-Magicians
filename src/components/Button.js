@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-export default function DigitButton({value}) {
+// eslint-disable-next-line react/prop-types
+export default function Button({ value }) {
   return (
-    <button type='button'>{value}</button>
-  )
+    <button type="button">{value}</button>
+  );
 }
