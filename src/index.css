@@ -41,10 +41,36 @@ code {
   grid-template-rows: minmax(7rem, auto) repeat(5, 4em);
 }
 
+.btn {
+  border: 0.1px solid black;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+button:hover:not(.orange), button:focus {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: azure;
+}
+
+.orange {
+  background-color: orange;
+}
+
 .output {
   display: flex;
   justify-content: flex-end;
   grid-column: 1 / -1;
   background-color: black;
   color: azure;
+  padding-inline: 0.5em;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.current-operand {
+  font-size: 3rem;
+}
+
+.span-two {
+  grid-column: 1 / 3;
 }
