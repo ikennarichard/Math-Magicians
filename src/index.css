@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
+  min-height: 100vh;
 }
 
 code {
@@ -39,6 +40,7 @@ code {
   display: grid;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, auto) repeat(5, 4em);
+  margin-bottom: 1em;
 }
 
 .btn {
