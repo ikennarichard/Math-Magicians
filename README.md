@@ -66,6 +66,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Project setup with React
+- Add components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,16 +105,17 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-  cd my-project
-  npm install
+  ```bash
+    cd my-project
+    npm install
+  ```
 
 ### Usage
 
 To run the project, execute the following command:
-
-  npm run build
-  npm start
-
+  ```bash
+    npm start
+  ```
 
 ### Run tests
 
@@ -125,10 +127,14 @@ To run tests, run the following command:
 ```
 
 - Stylint
-  npx stylelint "**/*.{css,scss}"
+```bash 
+npx stylelint "**/*.{css,scss}"
+```
 
 - Eslint
+```bash
   npx eslint "**/*.{js,jsx}"
+```
 
 ### Deployment
 
