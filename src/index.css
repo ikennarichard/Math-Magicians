@@ -49,7 +49,8 @@ code {
   font-size: 1.5rem;
 }
 
-button:hover:not(.orange), button:focus {
+button:focus,
+button:hover:not(.orange) {
   background-color: rgba(0, 0, 0, 0.75);
   color: azure;
 }
