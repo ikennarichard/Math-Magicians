@@ -67,6 +67,7 @@
 
 - Project setup with React
 - Add components
+- Perform basic math operations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
