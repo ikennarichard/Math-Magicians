@@ -36,6 +36,11 @@ code {
     monospace;
 }
 
+main {
+  display: flex;
+  gap: 10px;
+}
+
 .calculator-grid {
   display: grid;
   grid-template-columns: repeat(4, 6rem);
