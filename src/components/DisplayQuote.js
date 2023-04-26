@@ -14,24 +14,20 @@ export default function DisplayQuote() {
         });
         const result = await response.json();
         setData(result[0]);
-        setLoading(false);
       } catch (e) {
         setLoading(false);
         throw new Error(e);
       }
     }
     getQuote();
-  }, [setData]);
+  }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
   if (!loading) {
     return <p>Encountered a problem while getting quote</p>;
   }
 
   return (
-    <section>
+    <section className="quote_display">
       <h2>Quote</h2>
       <quote>{data.quote}</quote>
       <p className="author">{data.author}</p>
