@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Button from './Button';
 import Screen from './Screen';
-// import calculate from '../logic/calculate';
-// import operate from '../logic/operate';
+import calculate from '../logic/calculate';
 
 export default function Calculator() {
   const [value, setValue] = useState({ total: null, next: null, operation: null });
@@ -13,7 +12,7 @@ export default function Calculator() {
 
   return (
     <div className="calculator-grid">
-      <Screen value={value} />
+      <Screen value={value.next || value.total || value.operation} />
       <Button value="AC" onClick={(e) => handleClick(e)} />
       <Button value="+/-" />
       <Button value="%" />
