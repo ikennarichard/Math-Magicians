@@ -4,34 +4,33 @@ import Screen from './Screen';
 import calculate from '../logic/calculate';
 
 export default function Calculator() {
-  const [value, setValue] = useState({ total: null, next: null, operation: null });
+  const [value, setValue] = useState({ total: '0', next: null, operation: null });
 
-  function handleClick(e) {
-    setValue(e.target.textContent);
+  function handleClick(digit) {
+    setValue(calculate(value, digit));
   }
-
   return (
     <div className="calculator-grid">
-      <Screen value={value.next || value.total || value.operation} />
-      <Button value="AC" onClick={(e) => handleClick(e)} />
-      <Button value="+/-" />
-      <Button value="%" />
-      <Button value="÷" bg="orange" />
-      <Button value={7} />
-      <Button value={8} />
-      <Button value={9} />
-      <Button value="*" bg="orange" />
-      <Button value={4} />
-      <Button value={5} />
-      <Button value={6} />
-      <Button value="-" bg="orange" />
-      <Button value={1} />
-      <Button value={2} />
-      <Button value={3} />
-      <Button value="+" bg="orange" />
-      <Button value={0} span="span-two" />
-      <Button value="." />
-      <Button value="=" bg="orange" />
+      <Screen value={value.total || value.next} />
+      <Button value="AC" press={(e) => handleClick(e.target.textContent)} />
+      <Button value="+/-" press={(e) => handleClick(e.target.textContent)} />
+      <Button value="%" press={(e) => handleClick(e.target.textContent)} />
+      <Button value="÷" bg="orange" press={(e) => handleClick(e.target.textContent)} />
+      <Button value={7} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={8} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={9} press={(e) => handleClick(e.target.textContent)} />
+      <Button value="*" bg="orange" press={(e) => handleClick(e.target.textContent)} />
+      <Button value={4} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={5} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={6} press={(e) => handleClick(e.target.textContent)} />
+      <Button value="-" bg="orange" press={(e) => handleClick(e.target.textContent)} />
+      <Button value={1} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={2} press={(e) => handleClick(e.target.textContent)} />
+      <Button value={3} press={(e) => handleClick(e.target.textContent)} />
+      <Button value="+" bg="orange" press={(e) => handleClick(e.target.textContent)} />
+      <Button value={0} span="span-two" press={(e) => handleClick(e.target.textContent)} />
+      <Button value="." press={(e) => handleClick(e.target.textContent)} />
+      <Button value="=" bg="orange" press={(e) => handleClick(e.target.textContent)} />
     </div>
   );
 }
