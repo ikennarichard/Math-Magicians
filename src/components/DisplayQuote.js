@@ -29,7 +29,7 @@ export default function DisplayQuote() {
   return (
     <section className="quote_display">
       <h2>Quote</h2>
-      <quote>{data.quote}</quote>
+      <q>{data.quote}</q>
       <p className="author">{data.author}</p>
     </section>
   );
