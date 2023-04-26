@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function DisplayQuote() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getQuote() {
@@ -14,6 +15,7 @@ export default function DisplayQuote() {
         const result = await response.json();
         setData(result);
       } catch (e) {
+        setLoading(false);
         throw new Error(e);
       }
     }
