@@ -1,12 +1,20 @@
-import React from 'react';
+import { useState } from 'react';
 import Button from './Button';
 import Screen from './Screen';
+// import calculate from '../logic/calculate';
+// import operate from '../logic/operate';
 
 export default function Calculator() {
+  const [value, setValue] = useState({ total: null, next: null, operation: null });
+
+  function handleClick(e) {
+    setValue(e.target.textContent);
+  }
+
   return (
     <div className="calculator-grid">
-      <Screen />
-      <Button value="AC" />
+      <Screen value={value} />
+      <Button value="AC" onClick={(e) => handleClick(e)} />
       <Button value="+/-" />
       <Button value="%" />
       <Button value="÷" bg="orange" />
