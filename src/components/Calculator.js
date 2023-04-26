@@ -20,7 +20,7 @@ export default function Calculator() {
       <Button value="7" press={(e) => handleClick(e.target.textContent)} />
       <Button value="8" press={(e) => handleClick(e.target.textContent)} />
       <Button value="9" press={(e) => handleClick(e.target.textContent)} />
-      <Button value="*" bg="orange" press={(e) => handleClick(e.target.textContent)} />
+      <Button value="x" bg="orange" press={(e) => handleClick(e.target.textContent)} />
       <Button value="4" press={(e) => handleClick(e.target.textContent)} />
       <Button value="5" press={(e) => handleClick(e.target.textContent)} />
       <Button value="6" press={(e) => handleClick(e.target.textContent)} />
