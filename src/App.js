@@ -3,10 +3,13 @@ import DisplayQuote from './components/DisplayQuote';
 
 function App() {
   return (
-    <div className="App">
-      <Calculator />
-      <DisplayQuote />
-    </div>
+    <>
+      <h1>Math Magicians</h1>
+      <div className="App">
+        <Calculator />
+        <DisplayQuote />
+      </div>
+    </>
   );
 }
 
