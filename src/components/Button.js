@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-// eslint-disable-next-line react/prop-types
-export default function Button({ value, span, bg }) {
+export default function Button({
+  value, span, bg, press,
+}) {
   return (
-    <button type="button" className={`btn ${[span, bg].join('')}`}>{value}</button>
+    <button type="button" className={`btn ${[span, bg].join('')}`} onClick={press}>{value}</button>
   );
 }
