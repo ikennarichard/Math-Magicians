@@ -34,7 +34,7 @@
 
 # 📖 Math Magicians <a name="about-project"></a>
 
-  Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations or read random math-related quote.
+  Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations or read random computer related quote.
 
 ## 🛠 Built With <a name="built-with"></a>
 
