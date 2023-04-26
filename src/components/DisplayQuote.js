@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export default function DisplayQuote() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function getQuote() {
@@ -14,7 +15,9 @@ export default function DisplayQuote() {
         });
         const result = await response.json();
         setData(result[0]);
+        setLoading(false);
       } catch (e) {
+        setError(true);
         setLoading(false);
         throw new Error(e);
       }
@@ -22,14 +25,25 @@ export default function DisplayQuote() {
     getQuote();
   }, []);
 
-  if (!loading) {
+  if (loading) {
+    return (
+      <section className="quote_display">
+        <h2>Quote</h2>
+        <p>Loading quote...</p>
+      </section>
+    );
+  }
+
+  if (error || data === undefined) {
     return <p>Encountered a problem while getting quote</p>;
   }
 
   return (
     <section className="quote_display">
       <h2>Quote</h2>
-      <q>{data.quote}</q>
+      <q>
+        {data.quote}
+      </q>
       <p className="author">{data.author}</p>
     </section>
   );
