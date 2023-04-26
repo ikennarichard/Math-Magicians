@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function DisplayQuote() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +13,8 @@ export default function DisplayQuote() {
           contentType: 'application/json',
         });
         const result = await response.json();
-        setData(result);
+        setData(result[0]);
+        setLoading(false);
       } catch (e) {
         setLoading(false);
         throw new Error(e);
@@ -26,10 +27,14 @@ export default function DisplayQuote() {
     return <p>Loading...</p>;
   }
   if (!loading) {
-    return <p>Encountered a problem while getting data</p>;
+    return <p>Encountered a problem while getting quote</p>;
   }
 
   return (
-    <div>DisplayQuote</div>
+    <section>
+      <h2>Quote</h2>
+      <quote>{data.quote}</quote>
+      <p className="author">{data.author}</p>
+    </section>
   );
 }
