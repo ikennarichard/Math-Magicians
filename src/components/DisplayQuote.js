@@ -22,6 +22,13 @@ export default function DisplayQuote() {
     getQuote();
   }, [setData]);
 
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (!loading) {
+    return <p>Encountered a problem while getting data</p>;
+  }
+
   return (
     <div>DisplayQuote</div>
   );
