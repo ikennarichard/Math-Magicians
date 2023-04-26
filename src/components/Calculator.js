@@ -11,7 +11,7 @@ export default function Calculator() {
   }
   return (
     <div className="calculator-grid">
-      <Screen value={value.total || value.next} />
+      <Screen value={value} />
       <Button value="AC" press={(e) => handleClick(e.target.textContent)} />
       <Button value="+/-" press={(e) => handleClick(e.target.textContent)} />
       <Button value="%" press={(e) => handleClick(e.target.textContent)} />
