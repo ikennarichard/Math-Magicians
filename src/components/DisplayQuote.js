@@ -28,7 +28,7 @@ export default function DisplayQuote() {
   if (loading) {
     return (
       <section className="quote_display">
-        <p>Loading quote...</p>
+        <p style={{ fontSize: '1.3rem' }}>Loading quote...</p>
       </section>
     );
   }
@@ -36,14 +36,14 @@ export default function DisplayQuote() {
   if (error || data === undefined) {
     return (
       <section className="quote_display">
-        <p>Encountered a problem while trying to get quote...</p>
+        <p style={{ fontSize: '1.3rem' }}>Encountered a problem while trying to get quote...</p>
       </section>
     );
   }
 
   return (
     <section className="quote_display">
-      <q>
+      <q style={{ fontSize: '1.3rem' }}>
         {data.quote}
       </q>
       <p className="author">{data.author}</p>
