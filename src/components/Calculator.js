@@ -10,9 +10,15 @@ export default function Calculator() {
     setValue(calculate(value, digit));
   }
 
+  const textStyle = {
+    fontSize: '2em',
+    color: 'darkslategray',
+    marginTop: '2em',
+  };
+
   return (
     <>
-      <b style={{ fontSize: '2em', color: 'darkslategray' }}>Let&apos;s do some math!</b>
+      <b style={textStyle}>Let&apos;s do some math!</b>
       <div className="calculator-grid">
         <Screen value={value} />
         <Button value="AC" press={(e) => handleClick(e.target.textContent)} />
