@@ -28,19 +28,21 @@ export default function DisplayQuote() {
   if (loading) {
     return (
       <section className="quote_display">
-        <h2>Quote</h2>
         <p>Loading quote...</p>
       </section>
     );
   }
 
   if (error || data === undefined) {
-    return <p>Encountered a problem while getting quote</p>;
+    return (
+      <section className="quote_display">
+        <p>Encountered a problem while trying to get quote...</p>
+      </section>
+    );
   }
 
   return (
     <section className="quote_display">
-      <h2>Quote</h2>
       <q>
         {data.quote}
       </q>
