@@ -86,7 +86,6 @@ button:hover:not(.orange) {
 
 .quote_display {
   width: 400px;
-  margin-top: -3em;
   margin-inline: auto;
   margin-top: 6em;
 }
