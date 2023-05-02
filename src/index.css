@@ -22,7 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
-  place-items: center;
+  padding-inline: 1em;
   min-height: 100vh;
 }
 
@@ -38,6 +38,7 @@ code {
 
 .App {
   display: flex;
+  justify-content: space-between;
   gap: 70px;
 }
 
@@ -86,6 +87,8 @@ button:hover:not(.orange) {
 .quote_display {
   width: 400px;
   margin-top: -3em;
+  margin-inline: auto;
+  margin-top: 6em;
 }
 
 .quote_display h2 {
