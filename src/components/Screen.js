@@ -5,7 +5,7 @@ export default function Screen({ value }) {
   const { total, next, operation } = value;
   return (
     <div className="output">
-      <div className="current-operand">
+      <div className="current-operand" data-testid="output">
         {total}
         {operation}
         {next}
