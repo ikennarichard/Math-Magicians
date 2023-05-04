@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders quote correctly 1`] = `
+<section
+  className="quote_display"
+>
+  <p
+    style={
+      Object {
+        "fontSize": "1.3rem",
+      }
+    }
+  >
+    Loading quote...
+  </p>
+</section>
+`;
